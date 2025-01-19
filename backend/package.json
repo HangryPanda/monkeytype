@@ -91,7 +91,7 @@
     "openapi3-ts": "2.0.2",
     "readline-sync": "1.4.10",
     "supertest": "6.2.3",
-    "tsx": "4.16.2",
+    "tsx": "4.19.2",
     "typescript": "5.5.4",
     "vitest": "2.0.5",
     "vitest-mongodb": "1.0.0"
