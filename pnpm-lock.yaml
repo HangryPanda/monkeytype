@@ -17,12 +17,21 @@ importers:
       '@monkeytype/release':
         specifier: workspace:*
         version: link:packages/release
+      '@types/node':
+        specifier: 20.14.11
+        version: 20.14.11
       '@vitest/coverage-v8':
         specifier: 2.0.5
-        version: 2.0.5(vitest@2.0.5(@types/node@20.5.1)(happy-dom@15.10.2)(sass@1.70.0)(terser@5.31.3))
+        version: 2.0.5(vitest@2.0.5(@types/node@20.14.11)(happy-dom@13.4.1)(sass@1.70.0)(terser@5.31.3))
       conventional-changelog:
-        specifier: 6.0.0
-        version: 6.0.0(conventional-commits-filter@5.0.0)
+        specifier: 4.0.0
+        version: 4.0.0
+      dotenv:
+        specifier: 16.4.7
+        version: 16.4.7
+      firebase-admin:
+        specifier: 12.0.0
+        version: 12.0.0(encoding@0.1.13)
       husky:
         specifier: 8.0.1
         version: 8.0.1
@@ -36,15 +45,20 @@ importers:
         specifier: 1.2.1
         version: 1.2.1
       prettier:
-        specifier: 2.8.8
-        version: 2.8.8
+        specifier: 2.5.1
+        version: 2.5.1
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@types/node@20.14.11)(typescript@5.5.4)
       turbo:
-        specifier: 2.1.2
-        version: 2.1.2
+        specifier: 2.0.12
+        version: 2.0.12
+      typescript:
+        specifier: 5.5.4
+        version: 5.5.4
       vitest:
         specifier: 2.0.5
-        version: 2.0.5(@types/node@20.5.1)(happy-dom@15.10.2)(sass@1.70.0)(terser@5.31.3)
-
+        version: 2.0.5(@types/node@20.14.11)(happy-dom@13.4.1)(sass@1.70.0)(terser@5.31.3)
   backend:
     dependencies:
       '@date-fns/utc':
@@ -93,11 +107,8 @@ importers:
         specifier: 4.21.1
         version: 4.21.1
       express-rate-limit:
-        specifier: 7.4.0
-        version: 7.4.0(express@4.21.1)
-      firebase-admin:
-        specifier: 12.0.0
-        version: 12.0.0(encoding@0.1.13)
+        specifier: 6.2.1
+        version: 6.2.1(express@4.19.2
       helmet:
         specifier: 4.6.0
         version: 4.6.0
@@ -231,12 +242,18 @@ importers:
       concurrently:
         specifier: 8.2.2
         version: 8.2.2
+      dotenv:
+        specifier: 10.0.0
+        version: 10.0.0
       eslint:
         specifier: 8.57.0
         version: 8.57.0
       eslint-watch:
         specifier: 8.0.0
         version: 8.0.0(eslint@8.57.0)
+      firebase-admin:
+        specifier: 12.0.0
+        version: 12.0.0(encoding@0.1.13)
       ioredis-mock:
         specifier: 7.4.0
         version: 7.4.0(ioredis@4.28.5)
@@ -249,6 +266,9 @@ importers:
       supertest:
         specifier: 6.2.3
         version: 6.2.3
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@types/node@20.14.11)(typescript@5.5.4)
       tsx:
         specifier: 4.16.2
         version: 4.16.2
@@ -4303,6 +4323,10 @@ packages:
 
   dotenv@16.4.5:
     resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
+
+  dotenv@16.4.7:
+    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
     engines: {node: '>=12'}
 
   duplexify@3.7.1:
@@ -12210,7 +12234,6 @@ snapshots:
       vitest: 2.0.5(@types/node@20.5.1)(happy-dom@15.10.2)(sass@1.70.0)(terser@5.31.3)
     transitivePeerDependencies:
       - supports-color
-
   '@vitest/expect@2.0.5':
     dependencies:
       '@vitest/spy': 2.0.5
@@ -13761,6 +13784,8 @@ snapshots:
       is-obj: 2.0.0
 
   dotenv@16.4.5: {}
+
+  dotenv@16.4.7: {}
 
   duplexify@3.7.1:
     dependencies:
@@ -19342,6 +19367,24 @@ snapshots:
       '@ts-graphviz/common': 2.1.2
       '@ts-graphviz/core': 2.0.3
 
+  ts-node@10.9.2(@types/node@20.14.11)(typescript@5.5.4):
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 20.14.11
+      acorn: 8.12.1
+      acorn-walk: 8.3.3
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 5.5.4
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+
   ts-node@10.9.2(@types/node@20.5.1)(typescript@5.5.4):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
@@ -19773,7 +19816,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-
   vite-node@2.0.5(@types/node@20.5.1)(sass@1.70.0)(terser@5.31.3):
     dependencies:
       cac: 6.7.14
@@ -19865,7 +19907,6 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.70.0
       terser: 5.31.3
-
   vitest-mongodb@1.0.0:
     dependencies:
       debug: 4.3.6(supports-color@5.5.0)
@@ -19910,7 +19951,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-
   vitest@2.0.5(@types/node@20.5.1)(happy-dom@15.10.2)(sass@1.70.0)(terser@5.31.3):
     dependencies:
       '@ampproject/remapping': 2.3.0
@@ -19943,7 +19983,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-
   vlq@0.2.3: {}
 
   vscode-json-languageservice@4.2.1:
